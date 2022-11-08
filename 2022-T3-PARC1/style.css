@@ -1,0 +1,42 @@
+/* changing the color of the element */
+.So_Bad{
+color:darkred
+} 
+/* adding icon after the element */
+.So_Bad::after{
+   
+    content: " 😡";
+}
+/* changing the color of the element */
+.Bad{
+    color: red;
+}
+/* adding icon after the element */
+.Bad::after{
+    content: " 😤";
+}
+/* changing the color of the element */
+.Good{
+    color: gold
+}
+/* adding icon after the element */
+.Good::after{
+    content: " 😁";
+}
+/* changing the color of the element */
+.Very_Good{
+    color:lightgreen;
+
+}
+/* adding icon after the element */
+.Very_Good::after{
+    content: " 😍";
+}
+/* changing the color of the element */
+.Excellent{
+    color: darkgreen;
+}
+/* adding icon after the element */
+.Excellent::after{
+    content: " 😘";
+}
