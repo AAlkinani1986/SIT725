@@ -1,5 +1,7 @@
-var express = require('express')
+//import express node framework
+const express = require('express')
 const app = express()
+//to call index html file when it booted
 app.use(express.static(__dirname))
 var num1, num2, operation, result
 app.get('/calculate', (req, res) => {
@@ -10,7 +12,7 @@ app.get('/calculate', (req, res) => {
   result = operate(parseInt(num1), parseInt(num2), operation)
   res.json({ statusCode: 200, data: result, message: 'Success' })
 })
-
+// will do calculation depending on the operation that have been requested
 const operate = (num1, num2, operator) => {
   switch (operator) {
     case 'sum':
@@ -29,10 +31,10 @@ const operate = (num1, num2, operator) => {
       break
 
     default:
-      console.log(`Sorry, not sure ${expr}.`)
+      console.log(`Sorry, not sure ${operator}.`)
   }
 }
-
+// server port
 app.listen(3232, () => {
   console.log('Server is listening to on port 3232')
 })

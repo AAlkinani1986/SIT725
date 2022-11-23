@@ -1,3 +1,4 @@
+//async function to fetch the result from the api
 async function submit(num1, num2, operation) {
   return await fetch(
     `/calculate?num1=${num1}&num2=${num2}&operation=${operation}`,
@@ -9,6 +10,7 @@ async function submit(num1, num2, operation) {
     },
   ).then((response) => response.json())
 }
+//get the selected value from the radio
 function displayRadioValue() {
   var operate = document.getElementsByName('radioC')
 
@@ -16,7 +18,7 @@ function displayRadioValue() {
     if (operate[i].checked) return operate[i].value
   }
 }
-
+// add event when btn have been click
 const btn = document.querySelector('.btn')
 btn.addEventListener('click', (event) => {
   let n1 = document.getElementById('num1').value
@@ -28,5 +30,6 @@ btn.addEventListener('click', (event) => {
   results().then((result) => {
     res.value = result.data
   })
+  // prevent page from refreshing
   event.preventDefault()
 })
